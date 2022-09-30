@@ -64,16 +64,17 @@ $z = "C:\Users\Administrator\proccess"+$i+"_" + $j
 
 #create new subdirectory to store another process
 New-Item -Path $z -ItemType Directory
+Start-Sleep -s 1
 Copy-Item -Path "C:\Users\Administrator\Desktop\proccess\*" -Destination $z -PassThru -Recurse
 
 #make specific json
 $jsonpath = "C:\Users\Administrator\proccess"+$i+"_"+$j+"\data\collins_co_coordinates.json"
-$jsoncontent = '{"type": "Polygon","coordinates": [[['+$temp.coordinates[0][0][0]+', '+$temp.coordinates[0][0][1]+'],['+$temp.coordinates[0][1][0]+', '+$temp.coordinates[0][1][1]+'],['+$temp.coordinates[0][2][0]+', '+$temp.coordinates[0][2][1]+'],['+$temp.coordinates[0][3][0]+'6, '+$temp.coordinates[0][3][1]+'],['+$temp.coordinates[0][0][0]+', '+$temp.coordinates[0][0][1]+']]]}'
+$jsoncontent = '{"type": "Polygon","coordinates": [[['+$temp.coordinates[0][0][0]+', '+$temp.coordinates[0][0][1]+'],['+$temp.coordinates[0][1][0]+', '+$temp.coordinates[0][1][1]+'],['+$temp.coordinates[0][3][0]+'6, '+$temp.coordinates[0][3][1]+'],['+$temp.coordinates[0][2][0]+', '+$temp.coordinates[0][2][1]+'],['+$temp.coordinates[0][0][0]+', '+$temp.coordinates[0][0][1]+']]]}'
 New-Item $jsonpath
 Set-Content $jsonpath $jsoncontent
 
 Set-Location "C:\Users\Administrator\Desktop\risk_assesment_sum22\infernoguard\scripts"
-$dir = "C:\Users\Administrator\proccess"+$i+"_"+$j+"\infernoguard\Scripts"
+$dir = "C:\Users\Administrator\proccess"+$i+"_"+$j
 $string = '-nologo -noprofile -executionpolicy bypass -command ./activate.ps1; cd '+$dir+'; python -m bin.risk_assessment; Read-Host "Wait for a key to be pressed"'
 start-process powershell.exe -argument $string
 

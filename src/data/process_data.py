@@ -29,7 +29,7 @@ class MakeData:
         :param create_csv: Whether to create output csv files (bool)
         """
         self.data_path = data_path
-        self.temp_path = data_path + "C:\Users\Administrator\Desktop\risk_assesment_sum22\src\data\temp"
+        self.temp_path = "C:/Users/Administrator/Desktop/risk_assesment_sum22/data/temp"
         try:
             os.mkdir(self.temp_path)
         except FileExistsError:

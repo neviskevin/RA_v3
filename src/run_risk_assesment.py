@@ -8,7 +8,7 @@ def run_firerisk(coordinate_file):
     :return: None
     """
     # Path to the data folder
-    data_path = "data"
+    data_path = "/data/"
 
     # "FEATURE NAME": ("FEATURE FILE", "MERGE NAME FILE")
     # If you want to get up to date data using the Ambee API, use the following

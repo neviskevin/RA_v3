@@ -1,5 +1,5 @@
 from src import run_firerisk
-
+import sys
 
 def main():
     """

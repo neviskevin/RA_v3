@@ -1,0 +1,12 @@
+data['aspect'] = data['aspect'].apply(lambda x: x*0.12)
+data['elevation'] = data['elevation'].apply(lambda x: x*0.0751)
+data['vapr'] = data['vapr'].apply(lambda x: x*0.03)
+data['ndvi'] = data['ndvi'].apply(lambda x: x*0.251)
+data['ndmi'] = data['ndmi'].apply(lambda x: x*0.125)
+data['ndwi'] = data['ndwi'].apply(lambda x: x*0.125)
+data['prec'] = data['prec'].apply(lambda x: x*0.024)
+data['slope'] = data['slope'].apply(lambda x: x*0.0749)
+data['wind'] = data['wind'].apply(lambda x: x*0.021)
+data['most_significant_source'] = data[['aspect','elevation','vapr','ndvi','ndmi','ndwi','prec','slope','wind']].idxmax(axis=1)
+data = data[['x','y','most_significant_source','fire_risk']]
+data.to_csv('firedata.csv')

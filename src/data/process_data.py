@@ -17,7 +17,7 @@ from .ambee_data import AmbeeData
 
 
 class MakeData:
-    def __init__(self, coordinate_file, data_path, rule_list, feature_set={}, download_files=False, create_csv=True):
+    def __init__(self, coordinate_file, data_path, rule_list, feature_set={}, download_files=True, create_csv=True):
         """
         MakeData is used to create feature sets, conduct ML analysis, and export output as both csv and GeoTiff rasters.
 
@@ -29,7 +29,7 @@ class MakeData:
         :param create_csv: Whether to create output csv files (bool)
         """
         self.data_path = data_path
-        self.temp_path = "C:/Users/Administrator/Desktop/risk_assesment_sum22/data/temp"
+        self.temp_path = data_path + "/temp/"
         try:
             os.mkdir(self.temp_path)
         except FileExistsError:

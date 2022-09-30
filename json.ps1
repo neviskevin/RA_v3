@@ -76,7 +76,7 @@ Set-Content $jsonpath $jsoncontent
 Set-Location "C:\Users\Administrator\Desktop\risk_assesment_sum22\infernoguard\scripts"
 $dir = "C:\Users\Administrator\proccess"+$i+"_"+$j
 $string = '-nologo -noprofile -executionpolicy bypass -command ./activate.ps1; cd '+$dir+'; python -m bin.risk_assessment; Read-Host "Wait for a key to be pressed"'
-start-process powershell.exe -argument $string
+#start-process powershell.exe -argument $string
 
 Start-Sleep -s 5
 # check for window open

@@ -21,10 +21,11 @@ VAL 1
 https://thesecmaster.com/procedure-to-install-openssl-on-the-windows-platform/
 
 Deploy server (will change IP address)
+
+```
 .\ngrok config 2GlsuLtVnE7LFwT3Jsg6VcxEd1w_41TzkCdCgFB5sPycwAviZ
-
 .\ngrok http 5000
-
+```
 
 # H3
 Version 3.7.1

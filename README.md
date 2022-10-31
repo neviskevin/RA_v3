@@ -4,25 +4,12 @@ Start: flask --app server run
 Endpoint: https://d1a1-54-144-208-8.ngrok.io/value/
 
 ```
-GET /
-```
-	returns active if running
-```
-GET /point/<x>/<y>/<res>
-```
-	returns coordinates of hexagon vertices at given resolution
-```
-GET /id/<x>/<y>/<res>
-```
-	returns the standardized h3 id
-```
+GET / returns active if running
+GET /point/<x>/<y>/<res> returns coordinates of hexagon vertices at given resolution
+GET /id/<x>/<y>/<res> returns the standardized h3 id
 GET /value/<id>
+GET /job/<id>This will start a persistent job
 ```
-```
-GET /job/<id>
-```
-	This will start a persistent job
-
 Optional Headers: 
 KEY ngrok-skip-browser-warning 
 VAL 1

@@ -1,23 +1,23 @@
-# Building H3 on Windows
+# Building Windows Cloud Environment
 
-H3 has been successfully built on Windows using Visual Studio 2017.
+Install git
+Install python
+https://www.python.org/downloads/
 
-You can use the CMake GUI to configure the Visual Studio project files needed to build H3. Alternately, you can do the same from the command line:
-
+Add to path: 
 ```
-mkdir build
-cd build
-cmake ..
+$PATH = [Environment]::GetEnvironmentVariable("PATH")
+$xampp_path = “C:\Users\Administrator\AppData\Local\Programs\Python\Python310"
+[Environment]::SetEnvironmentVariable("PATH", "$PATH;$xampp_path")
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+git clone https://github.com/neviskevin/proccess.git
+pip install virtualenv
+virtualenv infernoguard
+cd infernoguard/scripts 
+.\activate
+Pip install pipwin
+pipwin install gdal
+pipwin install fiona
+pip install -r requirements.txt
 ```
 
-You can now open `h3.sln` and build the `ALL_BUILD` project to build the H3 library, filter applications, and tests. From the command line:
-
-```
-msbuild ALL_BUILD.vcxproj
-```
-
-Tests can be run by building the `RUN_TESTS` project. Tests require `bash` be available, which is usually supplied by Git for Windows. From the command line:
-
-```
-msbuild RUN_TESTS.vcxproj
-```

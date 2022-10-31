@@ -1,6 +1,7 @@
 # AWS instance
 
 the remote desktop file is in this repository
+
 Password: @%7*4nTw5veZ6Rtl0rkxJP2FD*2&B*hb
 
 # Server

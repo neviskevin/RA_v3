@@ -3,6 +3,7 @@
 Start: flask --app server run
 Endpoint: https://d1a1-54-144-208-8.ngrok.io/value/
 
+```
 GET /
 	returns active if running
 GET /point/<x>/<y>/<res>
@@ -12,7 +13,7 @@ GET /id/<x>/<y>/<res>
 GET /value/<id>
 GET /job/<id>
 	This will start a persistent job
-
+```
 Optional Headers: 
 KEY ngrok-skip-browser-warning 
 VAL 1

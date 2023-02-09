@@ -1,8 +1,17 @@
+# proccess/src/data/process_data.py
+line 169 shows the calcultion for the risk value. This is from a research paper which analyzed histroical fire data
+
+# proccess/src/run_risk_assesment.py
+Takes a coordinate json file and outputs risk assesment, the calculation can be run on historical data
+
+## APIs
+
+
 # AWS instance
 
 the remote desktop file is in this repository
 
-Password: @%7*4nTw5veZ6Rtl0rkxJP2FD*2&B*hb
+Password: @SS-&7.4F=AX7HrrEvUUt1km5sZE*4Ve
 
 # Server
 
